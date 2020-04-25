@@ -37,8 +37,8 @@ blockchainTests.resets('', env => {
                 const makerAddress = addresses[0];
                 const takerAddress = addresses[1];
 
-                const makerAssetData = '0x'; // await contractWrappers.devUtils.encodeERC20AssetData(token1.address).callAsync();
-                const takerAssetData = '0x'; // await contractWrappers.devUtils.encodeERC20AssetData(token2.address).callAsync();
+                const makerAssetData = assetDataUtils.encodeERC20AssetData(token1.address);
+                const takerAssetData = assetDataUtils.encodeERC20AssetData(token2.address);
                 const makerAssetAmount = new BigNumber(1);
                 const takerAssetAmount = new BigNumber(1);
                 const exchangeAddress = contractWrappers.exchange.address;
